@@ -21,8 +21,8 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#0.8-preview",
-    "layout": "PolymerElements/layout#master",
-    "paper-styles": "PolymerElements/paper-styles#master"
+    "layout": "Polymer/layout#master",
+    "paper-styles": "PolymerLabs/paper-styles#master"
   },
   "devDependencies": {
     "webcomponentsjs": "Polymer/webcomponentsjs#master",
