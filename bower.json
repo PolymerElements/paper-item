@@ -21,14 +21,14 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#0.8-preview",
-    "layout": "Polymer/layout",
-    "paper-styles": "PolymerLabs/paper-styles"
+    "paper-styles": "PolymerElements/paper-styles"
   },
   "devDependencies": {
     "webcomponentsjs": "Polymer/webcomponentsjs",
     "core-doc-viewer": "Polymer/core-doc-viewer#0.8-preview",
     "core-icon": "Polymer/core-icon#0.8-preview",
     "core-icons": "Polymer/core-icons#0.8-preview",
+    "test-fixture": "Polymer/test-fixture#^0.8.0",
     "web-component-tester": "Polymer/web-component-tester#^2.2.0"
   }
 }

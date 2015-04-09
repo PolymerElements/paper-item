@@ -9,11 +9,10 @@
 -->
 
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../layout/x-layout.html">
-<link rel="import" href="../paper-styles/x-paper-styles.html">
+<link rel="import" href="../paper-styles/paper-styles.html">
 
 <!--
-`paper-item` is a list item.
+`paper-item` is a non-interactive list item.
 
 @element paper-item
 -->
@@ -46,7 +45,11 @@
 
     is: 'paper-item',
 
-    enableCustomStyleProperties: true
+    enableCustomStyleProperties: true,
+
+    hostAttributes: {
+      role: 'listitem'
+    }
 
   });
 
