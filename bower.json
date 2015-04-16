@@ -22,7 +22,7 @@
   "dependencies": {
     "polymer": "Polymer/polymer#0.8-preview",
     "layout": "Polymer/layout",
-    "paper-styles": "PolymerLabs/paper-styles"
+    "paper-styles": "PolymerElements/paper-styles#^0.8.0"
   },
   "devDependencies": {
     "webcomponentsjs": "Polymer/webcomponentsjs",
