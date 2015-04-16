@@ -9,7 +9,7 @@
 -->
 
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../paper-styles/x-paper-styles.html">
+<link rel="import" href="../paper-styles/paper-styles.html">
 
 <!--
 
@@ -23,6 +23,7 @@
     :host {
       --mixin(--layout-vertical);
       --mixin(--layout-center-justified);
+      --mixin(--layout-flex);
     }
 
     :host([two-line]) {
@@ -40,9 +41,10 @@
     }
 
     :host > ::content [secondary] {
-      --mixin(--paper-font-body1);
+      color: var(--secondary-text-color);
+      mixin(--paper-font-body1);
 
-      opacity: 0.54;
+      mixin(--paper-item-body-secondary);
     }
 
 
