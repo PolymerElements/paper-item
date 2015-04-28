@@ -22,31 +22,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="import" href="../../iron-icon/iron-icon.html">
   <link rel="import" href="../../iron-icons/iron-icons.html">
   <link rel="import" href="../../iron-icons/communication-icons.html">
+  <link rel="import" href="../../paper-checkbox/paper-checkbox.html">
+  <link rel="import" href="../../paper-toggle-button/paper-toggle-button.html">
   <link rel="import" href="../paper-icon-item.html">
   <link rel="import" href="../paper-item.html">
   <link rel="import" href="../paper-item-body.html">
 
+  <link rel="stylesheet" href="../../paper-styles/demo.css">
+
   <style>
-    body {
-      font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
-      font-size: 14px;
-      margin: 0;
-      padding: 24px;
-    }
-
-    section {
-      padding: 20px 0;
-    }
-
-    section > div {
-      padding: 14px;
-      font-size: 16px;
-    }
-
     .list {
       display: inline-block;
       border: 1px solid #ccc;
       padding: 8px 0;
+    }
+
+    .wide {
+      min-width: 400px;
     }
 
     .avatar {
@@ -132,6 +124,77 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <div class="avatar" item-icon></div>
         <div class="flex">Angela Decker</div>
         <iron-icon icon="communication:messenger"></iron-icon>
+      </paper-icon-item>
+    </div>
+
+  </section>
+
+  <section>
+
+    <div>Single-line item with avatar and checkbox</div>
+
+    <div class="list wide">
+      <paper-icon-item>
+        <div class="avatar" item-icon></div>
+        <div class="flex">Alphonso Engelking</div>
+        <paper-checkbox></paper-checkbox>
+      </paper-icon-item>
+      <paper-icon-item>
+        <div class="avatar" item-icon></div>
+        <div class="flex">Andrews Boyd</div>
+        <paper-checkbox checked></paper-checkbox>
+      </paper-icon-item>
+      <paper-icon-item>
+        <div class="avatar" item-icon></div>
+        <div class="flex">Angela Decker</div>
+        <paper-checkbox></paper-checkbox>
+      </paper-icon-item>
+    </div>
+
+  </section>
+
+  <section>
+
+    <div>Single-line item with checkbox and icon</div>
+
+    <div class="list">
+      <paper-icon-item>
+        <paper-checkbox item-icon></paper-checkbox>
+        <div class="flex">Alphonso Engelking</div>
+        <iron-icon icon="communication:messenger"></iron-icon>
+      </paper-icon-item>
+      <paper-icon-item>
+        <paper-checkbox checked item-icon></paper-checkbox>
+        <div class="flex">Andrews Boyd</div>
+        <iron-icon icon="communication:messenger"></iron-icon>
+      </paper-icon-item>
+      <paper-icon-item>
+        <paper-checkbox item-icon></paper-checkbox>
+        <div class="flex">Angela Decker</div>
+        <iron-icon icon="communication:messenger"></iron-icon>
+      </paper-icon-item>
+    </div>
+
+  </section>
+
+  <section>
+
+    <div>Single-line item with icon and toggle button</div>
+
+    <div class="list">
+      <paper-icon-item>
+        <iron-icon icon="communication:messenger" item-icon></iron-icon>
+        <div class="flex">Alphonso Engelking</div>
+        <paper-toggle-button checked></paper-toggle-button>
+      </paper-icon-item>
+      <paper-icon-item>
+        <iron-icon icon="communication:messenger" item-icon></iron-icon>
+        <div class="flex">Andrews Boyd</div>
+        <paper-toggle-button></paper-toggle-button>
+      </paper-icon-item>
+      <paper-icon-item>
+        <iron-icon icon="communication:messenger" item-icon></iron-icon>
+        <div class="flex">Angela Decker</div>
       </paper-icon-item>
     </div>
 
