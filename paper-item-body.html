@@ -12,8 +12,8 @@
 <link rel="import" href="../paper-styles/paper-styles.html">
 
 <!--
-
-@element paper-item-body
+Use `<paper-item-body>` in a `<paper-item>` or `<paper-icon-item>` to make two- or
+three- line items.
 -->
 
 <dom-module id="paper-item-body">
@@ -21,9 +21,9 @@
   <style>
 
     :host {
-      --mixin(--layout-vertical);
-      --mixin(--layout-center-justified);
-      --mixin(--layout-flex);
+      @apply(--layout-vertical);
+      @apply(--layout-center-justified);
+      @apply(--layout-flex);
     }
 
     :host([two-line]) {
@@ -41,10 +41,10 @@
     }
 
     :host > ::content [secondary] {
-      color: var(--secondary-text-color);
-      mixin(--paper-font-body1);
+      color: var(--paper-item-body-secondary-color, --secondary-text-color);
+      @apply(--paper-font-body1);
 
-      mixin(--paper-item-body-secondary);
+      @apply(--paper-item-body-secondary);
     }
 
 
@@ -62,9 +62,7 @@
 
   Polymer({
 
-    is: 'paper-item-body',
-
-    enableCustomStyleProperties: true
+    is: 'paper-item-body'
 
   });
 
