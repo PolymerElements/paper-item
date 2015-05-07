@@ -9,6 +9,7 @@
 -->
 
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../paper-styles/paper-styles.html">
 
 <!--
@@ -24,11 +25,11 @@
   <style>
 
     :host {
-      mixin(--layout-horizontal);
-      mixin(--layout-center);
-      mixin(--paper-font-subhead);
+      @apply(--layout-horizontal);
+      @apply(--layout-center);
+      @apply(--paper-font-subhead);
 
-      mixin(--paper-item);
+      @apply(--paper-item);
     }
 
   </style>
@@ -46,8 +47,6 @@
   Polymer({
 
     is: 'paper-item',
-
-    enableCustomStyleProperties: true,
 
     hostAttributes: {
       role: 'listitem'
