@@ -12,7 +12,29 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../paper-styles/paper-styles.html">
 
 <!--
-`paper-icon-item` is a list item with a fixed-width icon area.
+`<paper-icon-item>` is a convenience element to make an item with icon. It is a non interactive list
+item with a fixed-width icon area, according to Material Design. This is useful if the icons are of
+varying widths, but you want the item bodies to line up. Use this like a `<paper-item>`. The child
+node with the attribute `item-icon` is placed in the icon area.
+
+    <paper-icon-item>
+      <iron-icon icon="favorite" item-icon></iron-icon>
+      Favorite
+    </paper-icon-item>
+    <paper-icon-item>
+      <div class="avatar" item-icon></div>
+      Avatar
+    </paper-icon-item>
+
+### Styling
+
+The following custom properties and mixins are available for styling:
+
+Custom property | Description | Default
+----------------|-------------|----------
+`--paper-item-icon-width` | Width of the icon area     | `56px`
+`--paper-icon-item`       | Mixin applied to the item  | `{}`
+
 -->
 
 <dom-module id="paper-icon-item">
@@ -28,6 +50,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       @apply(--paper-item);
       @apply(--paper-icon-item);
+    }
+
+    .content-icon {
+      width: var(--paper-item-icon-width, 56px);
     }
 
   </style>
@@ -51,26 +77,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     hostAttributes: {
       'role': 'listitem'
-    },
-
-    properties: {
-
-      /**
-       * The width of the icon area.
-       *
-       * @attribute iconWidth
-       * @type String
-       * @default '56px'
-       */
-      iconWidth: {
-        type: String,
-        value: '56px'
-      }
-
-    },
-
-    ready: function() {
-      this.$.contentIcon.style.width = this.iconWidth;
     }
 
   });
