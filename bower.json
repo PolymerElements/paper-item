@@ -1,6 +1,6 @@
 {
   "name": "paper-item",
-  "version": "0.9.3",
+  "version": "1.0.0",
   "authors": [
     "The Polymer Authors"
   ],
@@ -22,16 +22,16 @@
   "homepage": "https://github.com/PolymerElements/paper-item",
   "ignore": [],
   "dependencies": {
-    "paper-styles": "PolymerElements/paper-styles#^0.9.0",
-    "polymer": "Polymer/polymer#^0.9.0"
+    "paper-styles": "PolymerElements/paper-styles#^1.0.0",
+    "polymer": "Polymer/polymer#^1.0.0"
   },
   "devDependencies": {
-    "iron-icon": "PolymerElements/iron-icon#^0.9.0",
-    "iron-icons": "PolymerElements/iron-icons#^0.9.0",
-    "paper-checkbox": "PolymerElements/paper-checkbox#^0.9.0",
-    "paper-toggle-button": "PolymerElements/paper-toggle-button#^0.9.0",
-    "iron-component-page": "PolymerElements/iron-component-page#^0.9.0",
-    "test-fixture": "PolymerElements/test-fixture#^0.9.0",
+    "iron-icon": "PolymerElements/iron-icon#^1.0.0",
+    "iron-icons": "PolymerElements/iron-icons#^1.0.0",
+    "paper-checkbox": "PolymerElements/paper-checkbox#^1.0.0",
+    "paper-toggle-button": "PolymerElements/paper-toggle-button#^1.0.0",
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "test-fixture": "PolymerElements/test-fixture#^1.0.0",
     "web-component-tester": "*",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
   }
