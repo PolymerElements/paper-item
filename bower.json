@@ -1,12 +1,14 @@
 {
   "name": "paper-item",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "description": "A material-design styled list item",
   "authors": [
     "The Polymer Authors"
   ],
   "keywords": [
     "web-components",
-    "polymer"
+    "polymer",
+    "item"
   ],
   "main": [
     "paper-item.html",
