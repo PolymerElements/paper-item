@@ -67,7 +67,20 @@ This element has `role="listitem"` by default. Depending on usage, it may be mor
 
       @apply(--paper-item);
     }
+    
+    :host([link]) {
+      padding: 0;
+    }
+    :host([link]) ::content a {
 
+      @apply(--layout-horizontal);
+      @apply(--layout-center);
+      @apply(--layout-flex);
+      min-height: var(--paper-item-min-height, 48px);
+      padding: 0px 16px;
+      color: inherit;
+      text-decoration: none;
+    }
   </style>
 
   <template>
