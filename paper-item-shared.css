@@ -14,6 +14,11 @@
   padding: 0px 16px;
 }
 
+:host.iron-selected {
+  @apply(--paper-item-selected);
+}
+
+
 :host > ::content > *:not(:first-child):not(:last-child) {
   margin-right: 16px;
 }
