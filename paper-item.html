@@ -9,7 +9,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../iron-behaviors/iron-control-state.html">
+<link rel="import" href="../iron-behaviors/iron-button-state.html">
 <link rel="import" href="../paper-styles/paper-styles.html">
 <link rel="import" href="paper-item-shared-styles.html">
 
@@ -76,8 +77,14 @@ This element has `role="listitem"` by default. Depending on usage, it may be mor
       is: 'paper-item',
 
       hostAttributes: {
-        role: 'listitem'
-      }
+        role: 'listitem',
+        tabindex: '0'
+      },
+
+      behaviors: [
+        Polymer.IronControlState,
+        Polymer.IronButtonState
+      ]
     });
   </script>
 </dom-module>
