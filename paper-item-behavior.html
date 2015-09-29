@@ -1,0 +1,61 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-behaviors/iron-control-state.html">
+<link rel="import" href="../iron-behaviors/iron-button-state.html">
+
+<!--
+`PaperItemBehavior` is a convenience behavior shared by <paper-item> and
+<paper-icon-item> that manages the shared control states and attributes of
+the items.
+-->
+
+<script>
+  /** @polymerBehavior */
+  Polymer.PaperItemBehavior = [
+    Polymer.IronControlState,
+    Polymer.IronButtonState,
+    {
+      hostAttributes: {
+        role: 'listitem',
+        tabindex: '0'
+      },
+
+      /**
+       * A handler that is called when the space is pressed. Overriden
+       * from IronButtonState.
+       *
+       * @param {CustomEvent} event A custom keyboard event.
+       */
+      _spaceKeyDownHandler: function(event) {
+        // Only handle the event if it's not coming from a child element.
+        var keyboardEvent = event.detail.keyboardEvent;
+        if (Polymer.Gestures.findOriginalTarget(keyboardEvent) === this) {
+          Polymer.IronButtonStateImpl._spaceKeyDownHandler.apply(this, [event]);
+        }
+      },
+
+      /**
+       * A handler that is called when the space is released. Overriden
+       * from IronButtonState.
+       *
+       * @param {CustomEvent} event A custom keyboard event.
+       */
+      _spaceKeyUpHandler: function(event) {
+        // Only handle the event if it's not coming from a child element.
+        var keyboardEvent = event.detail.keyboardEvent;
+        if (Polymer.Gestures.findOriginalTarget(keyboardEvent) === this) {
+          Polymer.IronButtonStateImpl._spaceKeyUpHandler.apply(this);
+        }
+      }
+    }
+  ];
+</script>
