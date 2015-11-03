@@ -19,43 +19,19 @@ the items.
 -->
 
 <script>
+  /** @polymerBehavior Polymer.PaperItemBehavior */
+  Polymer.PaperItemBehaviorImpl = {
+    hostAttributes: {
+      role: 'option',
+      tabindex: '0'
+    }
+  };
+
   /** @polymerBehavior */
   Polymer.PaperItemBehavior = [
     Polymer.IronControlState,
     Polymer.IronButtonState,
-    {
-      hostAttributes: {
-        role: 'listitem',
-        tabindex: '0'
-      },
-
-      /**
-       * A handler that is called when the space is pressed. Overriden
-       * from IronButtonState.
-       *
-       * @param {CustomEvent} event A custom keyboard event.
-       */
-      _spaceKeyDownHandler: function(event) {
-        // Only handle the event if it's not coming from a child element.
-        var keyboardEvent = event.detail.keyboardEvent;
-        if (Polymer.Gestures.findOriginalTarget(keyboardEvent) === this) {
-          Polymer.IronButtonStateImpl._spaceKeyDownHandler.apply(this, [event]);
-        }
-      },
-
-      /**
-       * A handler that is called when the space is released. Overriden
-       * from IronButtonState.
-       *
-       * @param {CustomEvent} event A custom keyboard event.
-       */
-      _spaceKeyUpHandler: function(event) {
-        // Only handle the event if it's not coming from a child element.
-        var keyboardEvent = event.detail.keyboardEvent;
-        if (Polymer.Gestures.findOriginalTarget(keyboardEvent) === this) {
-          Polymer.IronButtonStateImpl._spaceKeyUpHandler.apply(this);
-        }
-      }
-    }
+    Polymer.PaperItemBehaviorImpl
   ];
+
 </script>
