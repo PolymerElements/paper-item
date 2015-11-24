@@ -15,6 +15,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         display: block;
         min-height: var(--paper-item-min-height, 48px);
         padding: 0px 16px;
+
+        /**
+         * This seemingly unnecessary height attribute is needed for an IE 11
+         * bug where flexbox elements are not vertically aligned if the height
+         * property is not specified, even when min-height is present. See
+         * https://github.com/PolymerElements/paper-item/issues/35.
+         */
+        height: 1px;
       }
 
       :host(.iron-selected) {
