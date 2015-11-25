@@ -58,14 +58,15 @@ Custom property | Description | Default
       }
 
       :host > ::content > * {
-        white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        white-space: nowrap;
       }
 
       :host > ::content [secondary] {
-        color: var(--paper-item-body-secondary-color, --secondary-text-color);
         @apply(--paper-font-body1);
+
+        color: var(--paper-item-body-secondary-color, --secondary-text-color);
 
         @apply(--paper-item-body-secondary);
       }
