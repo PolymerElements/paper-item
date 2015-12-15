@@ -36,24 +36,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       :host(.iron-selected) {
         font-weight: var(--paper-item-selected-weight, bold);
+
         @apply(--paper-item-selected);
       }
 
       :host([disabled]) {
         color: var(--paper-item-disabled-color, --disabled-text-color);
+
         @apply(--paper-item-disabled);
       }
 
       :host(:focus) {
         position: relative;
         outline: 0;
+
         @apply(--paper-item-focused);
       }
 
       :host(:focus):before {
         @apply(--layout-fit);
-        content: '';
+
         background: currentColor;
+        content: '';
         opacity: var(--dark-divider-opacity);
         pointer-events: none;
 
