@@ -20,7 +20,7 @@
     "type": "git",
     "url": "git://github.com/PolymerElements/paper-item"
   },
-  "license": "MIT",
+  "license": "http://polymer.github.io/LICENSE.txt",
   "homepage": "https://github.com/PolymerElements/paper-item",
   "ignore": [],
   "dependencies": {
