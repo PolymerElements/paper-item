@@ -38,7 +38,7 @@
     "paper-input": "PolymerElements/paper-input#^1.0.0",
     "paper-toggle-button": "PolymerElements/paper-toggle-button#^1.0.0",
     "test-fixture": "PolymerElements/test-fixture#^1.0.0",
-    "web-component-tester": "Polymer/web-component-tester#^3.4.0",
+    "web-component-tester": "^4.0.0",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
     "iron-test-helpers": "PolymerElements/iron-test-helpers#^1.0.0"
   }
