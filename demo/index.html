@@ -163,6 +163,29 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </div>
       </template>
     </demo-snippet>
+
+    <h3>Paper-items can be used as links</h3>
+    <demo-snippet>
+      <template>
+        <style is="custom-style">
+          .paper-item-link {
+            color: inherit;
+            text-decoration: none;
+          }
+        </style>
+        <div role="listbox">
+          <a class="paper-item-link" href="#inbox" tabindex="-1">
+            <paper-item>Inbox</paper-item>
+          </a>
+          <a class="paper-item-link" href="#starred" tabindex="-1">
+            <paper-item>Starred</paper-item>
+          </a>
+          <a class="paper-item-link" href="#sent" tabindex="-1">
+            <paper-item>Sent mail</paper-item>
+          </a>
+        </div>
+      </template>
+    </demo-snippet>
   </div>
 </body>
 </html>
