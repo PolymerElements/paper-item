@@ -37,6 +37,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       </template>
     </test-fixture>
 
+    <test-fixture id="button">
+      <template>
+        <div role="listbox">
+          <button class="paper-item" role="option">item</button>
+        </div>
+      </template>
+    </test-fixture>
+
     <test-fixture id="iconItem">
       <template>
         <div role="listbox">
@@ -91,6 +99,37 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           }, 1);
         });
 
+        test('enter triggers a click event', function(done) {
+          MockInteractions.pressEnter(item);
+          Polymer.Base.async(function(){
+            // You need two ticks, one for the MockInteractions event, and one
+            // for the button event.
+            Polymer.Base.async(function(){
+              expect(clickHandler.callCount).to.be.equal(1);
+              done();
+            }, 1);
+          }, 1);
+        });
+
+        test('click triggers a click event', function(done) {
+          MockInteractions.tap(item);
+          Polymer.Base.async(function(){
+            expect(clickHandler.callCount).to.be.equal(1);
+            done();
+          }, 1);
+        });
+      });
+
+      suite('button basic', function() {
+        var item, clickHandler;
+
+        setup(function() {
+          item = fixture('button').querySelector('button');
+          clickHandler = sinon.spy();
+          item.addEventListener('click', clickHandler);
+        });
+
+        // Button also natively fires click after pressing space and enter.
         test('click triggers a click event', function(done) {
           MockInteractions.tap(item);
           Polymer.Base.async(function(){
@@ -196,6 +235,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         });
 
         a11ySuite('item');
+        a11ySuite('button');
         a11ySuite('iconItem');
       });
 
