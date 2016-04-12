@@ -110,33 +110,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             }, 1);
           }, 1);
         });
-
-        test('click triggers a click event', function(done) {
-          MockInteractions.tap(item);
-          Polymer.Base.async(function(){
-            expect(clickHandler.callCount).to.be.equal(1);
-            done();
-          }, 1);
-        });
-      });
-
-      suite('button basic', function() {
-        var item, clickHandler;
-
-        setup(function() {
-          item = fixture('button').querySelector('button');
-          clickHandler = sinon.spy();
-          item.addEventListener('click', clickHandler);
-        });
-
-        // Button also natively fires click after pressing space and enter.
-        test('click triggers a click event', function(done) {
-          MockInteractions.tap(item);
-          Polymer.Base.async(function(){
-            expect(clickHandler.callCount).to.be.equal(1);
-            done();
-          }, 1);
-        });
       });
 
       suite('paper-icon-item basic', function() {
