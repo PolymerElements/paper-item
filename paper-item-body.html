@@ -68,7 +68,7 @@ Custom property | Description | Default
       :host > ::slotted([secondary]) {
         @apply --paper-font-body1;
 
-        color: var(--paper-item-body-secondary-color, --secondary-text-color);
+        color: var(--paper-item-body-secondary-color, var(--secondary-text-color));
 
         @apply --paper-item-body-secondary;
       }

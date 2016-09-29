@@ -43,7 +43,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       :host([disabled]), .paper-item[disabled] {
-        color: var(--paper-item-disabled-color, --disabled-text-color);
+        color: var(--paper-item-disabled-color, var(--disabled-text-color));
 
         @apply --paper-item-disabled;
       }
