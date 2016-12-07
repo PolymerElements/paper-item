@@ -38,7 +38,8 @@
     "test-fixture": "PolymerElements/test-fixture#custom-elements-v1",
     "web-component-tester": "^4.0.0",
     "webcomponentsjs": "webcomponents/webcomponentsjs#v1",
-    "iron-test-helpers": "PolymerElements/iron-test-helpers#2.0-preview"
+    "iron-test-helpers": "PolymerElements/iron-test-helpers#2.0-preview",
+    "paper-input": "PolymerElements/paper-input#^1.1.22"
   },
   "variants": {
     "1.x": {
@@ -64,6 +65,12 @@
   "resolutions": {
     "polymer": "2.0-preview",
     "test-fixture": "custom-elements-v1",
-    "webcomponentsjs": "v1"
+    "webcomponentsjs": "v1",
+    "paper-styles": "2.0-preview",
+    "iron-flex-layout": "2.0-preview",
+    "iron-behaviors": "2.0-preview",
+    "iron-a11y-keys-behavior": "2.0-preview",
+    "iron-validatable-behavior": "2.0-preview",
+    "iron-meta": "2.0-preview"
   }
 }
