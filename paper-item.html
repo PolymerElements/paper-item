@@ -96,6 +96,9 @@ This element has `role="listitem"` by default. Depending on usage, it may be mor
       }
     </style>
     <slot></slot>
+    <!-- workaround https://github.com/Polymer/polymer/issues/4047 fails a11y
+    tests in 1.7 shady otherwise -->
+    <content></content>
   </template>
 
   <script>
