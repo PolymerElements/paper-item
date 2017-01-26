@@ -43,7 +43,8 @@ If you are concerned about performance and want to use `paper-item` in a `paper-
 with many items, you can just use a native `button` with the `paper-item` class
 applied (provided you have correctly included the shared styles):
 
-    <style is="custom-style" include="paper-item-shared-styles"></style>
+    <link rel="import" href="paper-item/paper-item-shared-styles.html">
+    <style is="custom-style" include="paper-item-button-styles"></style>
 
     <paper-listbox>
       <button class="paper-item" role="option">Inbox</button>
