@@ -57,14 +57,12 @@ Custom property | Description | Default
         min-height: var(--paper-item-body-three-line-min-height, 88px);
       }
 
-      :host > ::content > *,
       :host > ::slotted(*) {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
       }
 
-      :host > ::content [secondary],
       :host > ::slotted([secondary]) {
         @apply --paper-font-body1;
 
