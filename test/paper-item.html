@@ -39,6 +39,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <test-fixture id="button">
       <template>
+        <style include="paper-item-shared-styles"></style>
         <div role="listbox">
           <button class="paper-item" role="option">item</button>
         </div>
@@ -188,6 +189,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             expect(itemClickHandler.callCount).to.be.equal(0);
             done();
           }, 1);
+        });
+      });
+
+      suite('paper-item-shared-styles basic', function() {
+        var item;
+
+        setup(function() {
+          item = fixture('button').querySelector('.paper-item');
+        });
+
+        test('space triggers a click event', function(done) {
+          expect(item).to.be.ok;
         });
       });
 
