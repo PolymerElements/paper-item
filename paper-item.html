@@ -9,9 +9,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-behaviors/iron-button-state.html">
+<link rel="import" href="../iron-behaviors/iron-control-state.html">
 <link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="paper-item-behavior.html">
-<link rel="import" href="paper-item-shared-styles.html">
 
 <!--
 Material design: [Lists](https://www.google.com/design/spec/components/lists.html)
@@ -29,6 +30,20 @@ items.
         <div secondary>Your status is visible to everyone</div>
       </paper-item-body>
       <iron-icon icon="warning"></iron-icon>
+    </paper-item>
+
+Use the `item-icon` property to make an item with icon. It is an interactive
+list item with a fixed-width icon area, according to Material Design. This is
+useful if the icons are of varying widths, but you want the item bodies to line
+up. The child node with the attribute `item-icon` is placed in the icon area.
+
+    <paper-item>
+      <iron-icon icon="favorite" item-icon></iron-icon>
+      Favorite
+    </paper-item>
+    <paper-item>
+      <div class="avatar" item-icon></div>
+      Avatar
     </paper-item>
 
 To use `paper-item` as a link, wrap it in an anchor tag. Since `paper-item` will
@@ -85,17 +100,68 @@ This element has `role="listitem"` by default. Depending on usage, it may be mor
 
 <dom-module id="paper-item">
   <template>
-    <style include="paper-item-shared-styles"></style>
     <style>
       :host {
         @apply(--layout-horizontal);
         @apply(--layout-center);
         @apply(--paper-font-subhead);
 
+        position: relative;
+
+        min-height: var(--paper-item-min-height, 48px);
+        padding: 0px 16px;
+
         @apply(--paper-item);
+      }
+
+      :host([hidden]) {
+        display: none !important;
+      }
+
+      :host(.iron-selected) {
+        font-weight: var(--paper-item-selected-weight, bold);
+
+        @apply(--paper-item-selected);
+      }
+
+      :host([disabled]) {
+        color: var(--paper-item-disabled-color, --disabled-text-color);
+
+        @apply(--paper-item-disabled);
+      }
+
+      :host(:focus) {
+        position: relative;
+        outline: 0;
+
+        @apply(--paper-item-focused);
+      }
+
+      :host(:focus):before {
+        @apply(--layout-fit);
+
+        content: '';
+        pointer-events: none;
+
+        opacity: var(--dark-divider-opacity);
+        background: currentColor;
+
+        @apply(--paper-item-focused-before);
+      }
+
+      .content-icon {
+        @apply(--layout-horizontal);
+        @apply(--layout-center);
+
+        width: var(--paper-item-icon-width, 56px);
+
+        @apply(--paper-item-icon);
       }
     </style>
 
+    <div id="contentIcon" class="content-icon" hidden>
+      <content select="[item-icon]"></content>
+    </div>
     <content></content>
   </template>
 
@@ -103,9 +169,21 @@ This element has `role="listitem"` by default. Depending on usage, it may be mor
     Polymer({
       is: 'paper-item',
 
+      hostAttributes: {
+        role: 'option',
+        tabindex: '0'
+      },
+
       behaviors: [
-        Polymer.PaperItemBehavior
-      ]
+        Polymer.IronButtonState,
+        Polymer.IronControlState
+      ],
+
+      ready: function() {
+        if (this.queryEffectiveChildren('[item-icon]')) {
+          this.$.contentIcon.removeAttribute('hidden');
+        }
+      }
     });
   </script>
 </dom-module>
