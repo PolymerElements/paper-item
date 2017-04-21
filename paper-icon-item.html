@@ -9,7 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html">
 <link rel="import" href="../paper-styles/typography.html">
 <link rel="import" href="paper-item-behavior.html">
 <link rel="import" href="paper-item-shared-styles.html">
@@ -51,8 +51,15 @@ Custom property               | Description                                    |
     <style include="paper-item-shared-styles"></style>
     <style>
       :host {
-        @apply(--layout-horizontal);
-        @apply(--layout-center);
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
         @apply(--paper-font-subhead);
 
         @apply(--paper-item);
@@ -60,8 +67,15 @@ Custom property               | Description                                    |
       }
 
       .content-icon {
-        @apply(--layout-horizontal);
-        @apply(--layout-center);
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
 
         width: var(--paper-item-icon-width, 56px);
         @apply(--paper-item-icon);
