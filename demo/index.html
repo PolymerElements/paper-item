@@ -33,7 +33,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <style is="custom-style" include="demo-pages-shared-styles">
     div[role="listbox"] {
       border: 1px solid #e5e5e5;
+      @apply(--layout-vertical);
     }
+    paper-item-body {
+      height: 1px;
+    }
+
     .avatar {
       display: inline-block;
       box-sizing: border-box;
@@ -171,6 +176,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           .paper-item-link {
             color: inherit;
             text-decoration: none;
+            @apply(--layout-vertical);
           }
         </style>
         <div role="listbox">
