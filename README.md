@@ -131,7 +131,7 @@ The following custom properties and mixins are available for styling:
 
 ### Changes in 2.0
 
-Distribution is now done with the `slot="item-icon"` attributes (replacing the `icon-item` attribute):
+Distribution is now done with the `slot="item-icon"` attributes (replacing the `item-icon` attribute):
 
     <paper-icon-item>
       <iron-icon icon="favorite" slot="item-icon"></iron-icon>
