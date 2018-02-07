@@ -19,7 +19,7 @@ declare namespace Polymer {
    * <paper-icon-item> that manages the shared control states and attributes of
    * the items.
    */
-  interface PaperItemBehavior {
+  interface PaperItemBehavior extends Polymer.IronButtonState, Polymer.IronControlState {
     hostAttributes: object|null;
   }
 
