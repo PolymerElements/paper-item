@@ -1,29 +1,33 @@
 /**
 @license
 Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+This code may only be used under the BSD style license found at
+http://polymer.github.io/LICENSE.txt The complete set of authors may be found at
+http://polymer.github.io/AUTHORS.txt The complete set of contributors may be
+found at http://polymer.github.io/CONTRIBUTORS.txt Code distributed by Google as
+part of the polymer project is also subject to an additional IP rights grant
+found at http://polymer.github.io/PATENTS.txt
 */
 import '@polymer/polymer/polymer-legacy.js';
-
 import '@polymer/iron-flex-layout/iron-flex-layout.js';
-import { PaperItemBehavior } from './paper-item-behavior.js';
 import './paper-item-shared-styles.js';
-import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn.js';
-import { html } from '@polymer/polymer/lib/utils/html-tag.js';
+
+import {Polymer} from '@polymer/polymer/lib/legacy/polymer-fn.js';
+import {html} from '@polymer/polymer/lib/utils/html-tag.js';
+
+import {PaperItemBehavior} from './paper-item-behavior.js';
 
 /**
-Material design: [Lists](https://www.google.com/design/spec/components/lists.html)
+Material design:
+[Lists](https://www.google.com/design/spec/components/lists.html)
 
-`<paper-item>` is an interactive list item. By default, it is a horizontal flexbox.
+`<paper-item>` is an interactive list item. By default, it is a horizontal
+flexbox.
 
     <paper-item>Item</paper-item>
 
-Use this element with `<paper-item-body>` to make Material Design styled two-line and three-line
-items.
+Use this element with `<paper-item-body>` to make Material Design styled
+two-line and three-line items.
 
     <paper-item>
       <paper-item-body two-line>
@@ -41,9 +45,10 @@ focus as well by setting its tabindex to -1.
       <paper-item raised>Polymer Project</paper-item>
     </a>
 
-If you are concerned about performance and want to use `paper-item` in a `paper-listbox`
-with many items, you can just use a native `button` with the `paper-item` class
-applied (provided you have correctly included the shared styles):
+If you are concerned about performance and want to use `paper-item` in a
+`paper-listbox` with many items, you can just use a native `button` with the
+`paper-item` class applied (provided you have correctly included the shared
+styles):
 
     <style is="custom-style" include="paper-item-shared-styles"></style>
 
@@ -57,21 +62,31 @@ applied (provided you have correctly included the shared styles):
 
 The following custom properties and mixins are available for styling:
 
-Custom property               | Description                                  | Default
+Custom property               | Description                                  |
+Default
 ------------------------------|----------------------------------------------|----------
-`--paper-item-min-height`     | Minimum height of the item                   | `48px`
-`--paper-item`                | Mixin applied to the item                    | `{}`
-`--paper-item-selected-weight`| The font weight of a selected item           | `bold`
-`--paper-item-selected`       | Mixin applied to selected paper-items        | `{}`
-`--paper-item-disabled-color` | The color for disabled paper-items           | `--disabled-text-color`
-`--paper-item-disabled`       | Mixin applied to disabled paper-items        | `{}`
-`--paper-item-focused`        | Mixin applied to focused paper-items         | `{}`
-`--paper-item-focused-before` | Mixin applied to :before focused paper-items | `{}`
+`--paper-item-min-height`     | Minimum height of the item                   |
+`48px`
+`--paper-item`                | Mixin applied to the item                    |
+`{}`
+`--paper-item-selected-weight`| The font weight of a selected item           |
+`bold`
+`--paper-item-selected`       | Mixin applied to selected paper-items        |
+`{}`
+`--paper-item-disabled-color` | The color for disabled paper-items           |
+`--disabled-text-color`
+`--paper-item-disabled`       | Mixin applied to disabled paper-items        |
+`{}`
+`--paper-item-focused`        | Mixin applied to focused paper-items         |
+`{}`
+`--paper-item-focused-before` | Mixin applied to :before focused paper-items |
+`{}`
 
 ### Accessibility
 
-This element has `role="listitem"` by default. Depending on usage, it may be more appropriate to set
-`role="menuitem"`, `role="menuitemcheckbox"` or `role="menuitemradio"`.
+This element has `role="listitem"` by default. Depending on usage, it may be
+more appropriate to set `role="menuitem"`, `role="menuitemcheckbox"` or
+`role="menuitemradio"`.
 
     <paper-item role="menuitemcheckbox">
       <paper-item-body>
