@@ -38,26 +38,18 @@ name `item-icon` is placed in the icon area.
 
 The following custom properties and mixins are available for styling:
 
-Custom property               | Description                                    |
-Default
-------------------------------|------------------------------------------------|----------
-`--paper-item-icon-width`     | Width of the icon area                         |
-`56px`
-`--paper-item-icon`           | Mixin applied to the icon area                 |
-`{}`
-`--paper-icon-item`           | Mixin applied to the item                      |
-`{}`
-`--paper-item-selected-weight`| The font weight of a selected item             |
-`bold`
-`--paper-item-selected`       | Mixin applied to selected paper-items | `{}`
-`--paper-item-disabled-color` | The color for disabled paper-items             |
-`--disabled-text-color`
-`--paper-item-disabled`       | Mixin applied to disabled paper-items        |
-`{}`
-`--paper-item-focused`        | Mixin applied to focused paper-items         |
-`{}`
-`--paper-item-focused-before` | Mixin applied to :before focused paper-items |
-`{}`
+Custom property | Description | Default
+----------------|-------------|----------
+`--paper-item-icon-width` | Width of the icon area | `56px`
+`--paper-item-icon` | Mixin applied to the icon area | `{}`
+`--paper-icon-item` | Mixin applied to the item | `{}`
+`--paper-item-selected-weight` | The font weight of a selected item | `bold`
+`--paper-item-selected` | Mixin applied to selected paper-items | `{}`
+`--paper-item-disabled-color` | The color for disabled paper-items | `--disabled-text-color`
+`--paper-item-disabled` | Mixin applied to disabled paper-items | `{}`
+`--paper-item-focused` | Mixin applied to focused paper-items | `{}`
+`--paper-item-focused-before` | Mixin applied to :before focused paper-items | `{}`
+
 */
 Polymer({
   _template: html`
