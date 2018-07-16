@@ -147,8 +147,8 @@ The following custom properties and mixins are available for styling:
 | `--paper-item-body-secondary` | Mixin applied to the `secondary` area | `{}` |
 
 
-See: [Documentation](https://www.webcomponents.org/element/@polymer/paper-spinner),
-  [Demo](https://www.webcomponents.org/element/@polymer/paper-spinner/demo/demo/index.html).
+See: [Documentation](https://www.webcomponents.org/element/@polymer/paper-item),
+  [Demo](https://www.webcomponents.org/element/@polymer/paper-item/demo/demo/index.html).
 
 ## Usage
 
