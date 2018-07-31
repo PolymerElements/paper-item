@@ -1,15 +1,24 @@
 /**
 @license
 Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+This code may only be used under the BSD style license found at
+http://polymer.github.io/LICENSE.txt The complete set of authors may be found at
+http://polymer.github.io/AUTHORS.txt The complete set of contributors may be
+found at http://polymer.github.io/CONTRIBUTORS.txt Code distributed by Google as
+part of the polymer project is also subject to an additional IP rights grant
+found at http://polymer.github.io/PATENTS.txt
 */
+import '@polymer/polymer/polymer-legacy.js';
+
+import '@polymer/iron-flex-layout/iron-flex-layout.js';
+import '@polymer/paper-styles/default-theme.js';
+import '@polymer/paper-styles/typography.js';
+import {Polymer} from '@polymer/polymer/lib/legacy/polymer-fn.js';
+import {html} from '@polymer/polymer/lib/utils/html-tag.js';
+
 /*
-Use `<paper-item-body>` in a `<paper-item>` or `<paper-icon-item>` to make two- or
-three- line items. It is a flex item that is a vertical flexbox.
+Use `<paper-item-body>` in a `<paper-item>` or `<paper-icon-item>` to make two-
+or three- line items. It is a flex item that is a vertical flexbox.
 
     <paper-item>
       <paper-item-body two-line>
@@ -18,7 +27,8 @@ three- line items. It is a flex item that is a vertical flexbox.
       </paper-item-body>
     </paper-item>
 
-The child elements with the `secondary` attribute is given secondary text styling.
+The child elements with the `secondary` attribute is given secondary text
+styling.
 
 ### Styling
 
@@ -26,24 +36,12 @@ The following custom properties and mixins are available for styling:
 
 Custom property | Description | Default
 ----------------|-------------|----------
-`--paper-item-body-two-line-min-height`   | Minimum height of a two-line item          | `72px`
-`--paper-item-body-three-line-min-height` | Minimum height of a three-line item        | `88px`
-`--paper-item-body-secondary-color`       | Foreground color for the `secondary` area  | `--secondary-text-color`
-`--paper-item-body-secondary`             | Mixin applied to the `secondary` area      | `{}`
+`--paper-item-body-two-line-min-height` | Minimum height of a two-line item | `72px`
+`--paper-item-body-three-line-min-height` | Minimum height of a three-line item | `88px`
+`--paper-item-body-secondary-color` | Foreground color for the `secondary` area | `--secondary-text-color`
+`--paper-item-body-secondary` | Mixin applied to the `secondary` area | `{}`
 
 */
-/*
-  FIXME(polymer-modulizer): the above comments were extracted
-  from HTML and may be out of place here. Review them and
-  then delete this comment!
-*/
-import '@polymer/polymer/polymer-legacy.js';
-
-import '@polymer/iron-flex-layout/iron-flex-layout.js';
-import '@polymer/paper-styles/default-theme.js';
-import '@polymer/paper-styles/typography.js';
-import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn.js';
-import { html } from '@polymer/polymer/lib/utils/html-tag.js';
 Polymer({
   _template: html`
     <style>
