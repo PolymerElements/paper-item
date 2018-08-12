@@ -18,7 +18,7 @@ import {IronControlState} from '@polymer/iron-behaviors/iron-control-state.js';
 <paper-icon-item> that manages the shared control states and attributes of
 the items.
 */
-/** @polymerBehavior Polymer.PaperItemBehavior */
+/** @polymerBehavior PaperItemBehavior */
 export const PaperItemBehaviorImpl = {
   hostAttributes: {role: 'option', tabindex: '0'}
 };
