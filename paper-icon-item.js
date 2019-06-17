@@ -52,6 +52,7 @@ Custom property | Description | Default
 
 */
 Polymer({
+  /** @override */
   _template: html`
     <style include="paper-item-shared-styles"></style>
     <style>

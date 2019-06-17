@@ -86,11 +86,11 @@ more appropriate to set `role="menuitem"`, `role="menuitemcheckbox"` or
       <paper-checkbox></paper-checkbox>
     </paper-item>
 
-@group Paper Elements
 @element paper-item
 @demo demo/index.html
 */
 Polymer({
+  /** @override */
   _template: html`
     <style include="paper-item-shared-styles">
       :host {
