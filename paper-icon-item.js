@@ -70,6 +70,7 @@ Polymer({
         @apply --layout-center;
 
         width: var(--paper-item-icon-width, 56px);
+        flex-shrink: 0;
         @apply --paper-item-icon;
       }
     </style>
